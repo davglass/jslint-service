@@ -1,6 +1,10 @@
 This project is a JSON webservice for running JSLint via PHP.
 
 
+Uses a modified version of jsline-console.js to print a JSON object of the output of JSLint.
+
+You can see a demo here: http://jslint.davglass.com/tests/
+
 Libraries used:
 
     Mozilla Rhino:
@@ -11,3 +15,6 @@ Libraries used:
     JSLint:
     Copyright 2002 Douglas Crockford
     http://jslint.com/
+
+    JSON:
+    http://json.org/
