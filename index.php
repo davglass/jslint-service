@@ -21,7 +21,8 @@ if ($_POST['source']) {
 if ($tempName) {
     $cmd = $java.' -jar '.escapeshellarg($rhino).' '.escapeshellarg($jslint).' '.escapeshellarg($tempName);
     echo($cmd);
-    $out = exec($cmd, $data);
+    //$out = exec($cmd, $data);
+    $out = passthru($cmd, $data);
 
     echo('<pre>'.print_r($out, 1).'</pre>');
     echo('<pre>'.print_r($data, 1).'</pre>');
