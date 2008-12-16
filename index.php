@@ -2,7 +2,7 @@
 
 $str = '';
 $java = `which java`;
-$dir = realpath('./');
+$dir = ''; //realpath('./');
 $jslint = $dir.'/lib/jslint/jslint-console.js';
 $rhino = $dir.'/lib/rhino/js.jar';
 
