@@ -4,6 +4,7 @@ $str = '';
 $java = `which java`;
 $dir = realpath('./');
 $jslint = $dir.'/lib/jslint/jslint-console.js';
+$fulljslint = $dir.'/lib/jslint/fulljslint.js';
 $rhino = $dir.'/lib/rhino/js.jar';
 
 
@@ -18,7 +19,7 @@ if ($_POST['source']) {
 
 
 if ($tempName) {
-    $cmd = $java.' -jar '.escapeshellarg($rhino).' '.escapeshellarg($jslint).' '.escapeshellarg($tempName);
+    $cmd = $java.' -jar '.escapeshellarg($rhino).' '.escapeshellarg($jslint).' '.$fulljslint.' '.escapeshellarg($tempName);
     echo($cmd);
     $out = exec($cmd, $data);
 
