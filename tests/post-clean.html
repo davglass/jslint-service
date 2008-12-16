@@ -9,14 +9,18 @@
 
 <form method="post" action="../index.php">
 <textarea name="source" rows="40" cols="80">
-var arr = new Array('1', '2', '3',);
+var arr = ['1', '2', '3'];
 
-var foo = new bar();
+var Bar = function() {};
 
-foo++;
+var foo = new Bar();
 
-for (i in test) {
-    alert(i);
+var test = {};
+
+for (var i in test) {
+    if (test.hasOwnProperty(i)) {
+        alert(i);
+    }
 }
 
 </textarea>

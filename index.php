@@ -21,17 +21,9 @@ if ($_POST['source']) {
 
 
 if ($tempName) {
-    $cmd = $java.' -jar '.escapeshellarg($rhino).' '.escapeshellarg($jslint).' '.$fulljslint.' '.escapeshellarg($tempName).' 2>&1';
-    //echo($cmd);
-    $out = exec($cmd, $data);
-    
-    $error = file_get_contents($tempNameOut);
-    $error = str_replace('js: ', '', $error);
-    $error = str_replace('"'.$tempName.'", ', '', $error);
-
-    //echo('<pre>'.$error.'</pre>');
+    $cmd = $java.' -jar '.escapeshellarg($rhino).' '.escapeshellarg($jslint).' '.escapeshellarg($fulljslint).' '.escapeshellarg($tempName).' 2>&1'; //This redirects error and out to out so we get it..
+    $out = exec($cmd);
     echo($out);
-    //echo('<pre>'.print_r($data, 1).'</pre>');
 
 } else {
     $json->error = new stdclass();
