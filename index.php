@@ -14,9 +14,7 @@ $json = new stdclass();
 if ($_POST['source']) {
     $str = $_POST['source'];
     $tempName = tempnam(sys_get_temp_dir(), 'jslint-');
-    $tempNameOut = tempnam(sys_get_temp_dir(), 'jslint-');
     file_put_contents($tempName, stripslashes($str));
-    chmod($tempName, 0755);
 }
 
 
@@ -24,6 +22,7 @@ if ($tempName) {
     $cmd = $java.' -jar '.escapeshellarg($rhino).' '.escapeshellarg($jslint).' '.escapeshellarg($fulljslint).' '.escapeshellarg($tempName).' 2>&1'; //This redirects error and out to out so we get it..
     $out = exec($cmd);
     echo($out);
+    unlink($tempName);
 
 } else {
     $json->error = new stdclass();
