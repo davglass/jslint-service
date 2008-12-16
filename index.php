@@ -19,7 +19,7 @@ if ($_POST['source']) {
 
 
 if ($tempName) {
-    $cmd = $java.' -jar '.escapeshellarg($rhino).' '.escapeshellarg($jslint).' '.$fulljslint.' '.escapeshellarg($tempName);
+    $cmd = $java.' -jar '.escapeshellarg($rhino).' '.escapeshellarg($fulljslint).' '.$jslint.' '.escapeshellarg($tempName);
     echo($cmd);
     $out = exec($cmd, $data);
 
