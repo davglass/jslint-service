@@ -22,7 +22,7 @@ if ($tempName) {
     $cmd = $java.' -jar '.escapeshellarg($rhino).' '.escapeshellarg($jslint).' '.escapeshellarg($tempName);
     echo($cmd);
     //$out = exec($cmd, $data);
-    $out = shell_exec($cmd);
+    $out = system($cmd, $data);
 
     echo('<pre>'.print_r($out, 1).'</pre>');
     echo('<pre>'.print_r($data, 1).'</pre>');
