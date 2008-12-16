@@ -1,7 +1,8 @@
 <?php
 
 $str = '';
-$java = `which java`;
+#$java = `which java`;
+$java = 'java';
 $dir = realpath('./');
 $jslint = $dir.'/lib/jslint/jslint-console.js';
 //$jslint = $dir.'/lib/jslint/fulljslint.js';
