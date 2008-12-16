@@ -4,7 +4,7 @@ $str = '';
 $java = `which java`;
 $dir = realpath('./');
 $jslint = $dir.'/lib/jslint/jslint-console.js';
-$jslint = $dir.'/lib/jslint/fulljslint.js';
+//$jslint = $dir.'/lib/jslint/fulljslint.js';
 $rhino = $dir.'/lib/rhino/js.jar';
 
 
