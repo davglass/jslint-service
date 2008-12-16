@@ -1,0 +1,13 @@
+This project is a JSON webservice for running JSLint via PHP.
+
+
+Libraries used:
+
+    Mozilla Rhino:
+    http://www.mozilla.org/rhino/
+    https://developer.mozilla.org/en/Rhino_License
+
+
+    JSLint:
+    Copyright 2002 Douglas Crockford
+    http://jslint.com/
