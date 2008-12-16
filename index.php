@@ -24,6 +24,9 @@ if ($tempName) {
     echo($cmd);
     //$out = exec($cmd, $data);
     $out = exec($cmd, $data);
+    $fileE = file_get_contents("php://stdin", "r");
+    echo $fileE;
+    
 
     echo('<pre>'.print_r($out, 1).'</pre>');
     echo('<pre>'.print_r($data, 1).'</pre>');
