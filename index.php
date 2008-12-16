@@ -9,7 +9,6 @@ $fulljslint = $dir.'/lib/jslint/fulljslint.js';
 $rhino = $dir.'/lib/rhino/js.jar';
 
 
-$json = new stdclass();
 
 if ($_POST['source']) {
     $str = $_POST['source'];
@@ -25,8 +24,9 @@ if ($tempName) {
     unlink($tempName);
 
 } else {
-    $json->error = new stdclass();
-    $json->error->message = 'No javascript to lint.';
+    $json = new stdclass();
+    $json->status = 'ERROR';
+    $json->errors = Array('No javascript to lint.');
     echo(json_encode($json));
 }
 
